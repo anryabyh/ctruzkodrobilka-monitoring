@@ -1,0 +1,32 @@
+{
+  "name": "electron-quick-start",
+  "version": "1.0.0",
+  "description": "A minimal Electron application",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron ."
+  },
+  "repository": "https://github.com/electron/electron-quick-start",
+  "keywords": [
+    "Electron",
+    "quick",
+    "start",
+    "tutorial",
+    "demo"
+  ],
+  "author": "GitHub",
+  "license": "CC0-1.0",
+  "devDependencies": {
+    "electron": "^22.0.0"
+  },
+  "dependencies": {
+    "@serialport/binding-mock": "^10.2.2",
+    "canvasjs": "^1.8.3",
+    "jquery": "^3.6.3",
+    "modbus-serial": "^8.0.9",
+    "plotly": "^1.0.6",
+    "plotly.js": "^2.18.2",
+    "plotly.js-dist": "^2.18.2",
+    "serialport": "^10.5.0"
+  }
+}

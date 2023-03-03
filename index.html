@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <!-- https://developer.mozilla.org/en-US/docs/Web/HTTP/CSP -->
+  <!-- <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'"> -->
+  <link href="https://fonts.googleapis.com/css?family=Montserrat:400" rel="stylesheet">
+  <link href="./styles.css" rel="stylesheet">
+  <link rel="preload" href="./shrifts/Gilroy-Light.woff2" as="font" type="font/woff2" crossorigin>
+  <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+  <script src="Main.js"></script>
+
+  <title>Steel Главная</title>
+</head>
+<body>
+  <div class="sidebar">
+    <ul>
+      <li><a href="index.html">Главная</a></li>
+      <li><a href="about.html">О нас</a></li>
+    </ul>
+  </div>
+  <div class="content">
+<div class="container">
+  <div class="left-pane">
+    <h1>Здравствуйте, вот ваша диаграмма</h1>
+    <div class="plotly-div">
+      <a href="https://plotly.com/~anryabyh2/0/?share_key=Qth4MHEy71zmQJVU8b5Aez" target="_blank" title="lastReadValues" style="display: block; text-align: center;">
+        <img src="https://plotly.com/~anryabyh2/0.png?share_key=Qth4MHEy71zmQJVU8b5Aez" alt="lastReadValues" style="max-width: 100%;width: 600px;"  width="600" onerror="this.onerror=null;this.src='https://plotly.com/404.png';" />
+      </a>
+      <script data-plotly="anryabyh2:0" sharekey-plotly="Qth4MHEy71zmQJVU8b5Aez" src="https://plotly.com/embed.js" async></script>
+    </div>  
+  </div>
+  <div class="right-pane container">
+    <div class="box">
+			<!-- Вывод сообщений здесь -->
+		</div>
+  </div>
+  <script>
+    // Функция для генерации случайного числа от min до max
+    function getRandomInt(min, max) {
+      return Math.floor(Math.random() * (max - min + 1)) + min;
+    }
+  
+    // Функция для добавления новой ошибки в элемент box
+    function addErrorMessage() {
+      const errorMessage = `Ошибка: Номер регистра ${getRandomInt(0, 65535)}.`;
+      const messageElement = document.createElement('p');
+      messageElement.textContent = errorMessage;
+      document.querySelector('.box').appendChild(messageElement);
+    }
+  
+    // Добавляем первую ошибку сразу после загрузки страницы
+    addErrorMessage();
+  
+    // Добавляем ошибки каждые 1.5 минуты
+    setInterval(() => {
+      addErrorMessage();
+    }, 90000); // 90000 миллисекунд = 1.5 минуты
+  </script>
+  
+</div>
+  </div>
+</body>
+
+</html>
